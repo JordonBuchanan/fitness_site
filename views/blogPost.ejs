@@ -1,0 +1,26 @@
+<% include partials/header %>
+<div class="container-fluid blogPostOverall">
+    <div class="row">
+        <div class="col-sm-12">
+            <img class="blogPostImg" src="<%= Posts.image %>">
+        </div>
+        <div class="col-sm-12 blogPostText">
+            <h1><%= Posts.name %></h1>
+            <hr>
+            <div class="myFace"></div>
+            <div class="blogTime"><small><%= moment(Posts.createdAt).fromNow() %></small></div>
+            <p>
+                <%= Posts.textField %>
+            </p>
+            <p>
+                <a href="/blog">Go Back</a>
+            </p>
+        <% if(currentUser && currentUser.isJordon){ %>
+        <form action="/blog/<%= Posts._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-danger btn-lg btn-block">Delete Post</button>
+        </form>
+        <% } %>
+        </div>
+    </div>
+</div>
+<% include partials/footer %>

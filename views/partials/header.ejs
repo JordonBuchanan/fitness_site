@@ -13,25 +13,29 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.js' />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">JFit</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+                  <ul class="nav navbar-nav mx-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
+                      <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
+                      <a href="#"><img src="../../images/JFlogo.png"></a>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Blog</a>
+                      <a class="nav-link" href="/blog">Blog</a>
                     </li>
                   </ul>
-                </div>
+                    <% if(currentUser && currentUser.isJordon) { %>
+                    <ul class="nav navbar-nav mx-auto">
+                      <li class="nav-item">
+                         <a class="nav-link" href="/logout">Log Out</a>  
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link" href="#"><%= currentUser.name %></a>  
+                      </li>
+                    </ul>
+                      <% } %>
               </nav>

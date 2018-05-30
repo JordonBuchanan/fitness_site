@@ -1,11 +1,55 @@
 body {
   font-family: 'Josefin Sans', sans-serif;
-  background: url('../images/weightlifting-3102642_1920.jpg') no-repeat;
-  background-position:center;
-  background-size: auto;
+  background: #1D976C;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* Keyframes */
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+a{
+  color: gray;
+}
+a:hover{
+  color: black;
+  text-decoration: none;
+}
+.nav-link{
+  margin: 5px 10px 0 10px;
+  font-size: 20px;
+  display: inline-block;
+}
+.bg-dark{
+  background: linear-gradient(to bottom, #343a40, black);
+}
+.Footer{
+  margin: auto;
+  padding: 15px;
+  background: linear-gradient(to top, #343a40, black);
+}
+.Footer a:hover{
+  color: white;
 }
 .Title{
-  margin-top: 75px;
+  margin-top: 0px;
+  background: url('../images/weightlifting-3102642_1920.jpg') no-repeat;
+  background-position:center;
+  background-size: cover;
+  box-shadow: 2px 2px 8px black;
+  animation-name: fadeInTop;
+  animation-duration:1s;
 }
 .Title h1{
   font-size: 100px;
@@ -36,12 +80,190 @@ body {
   color: white;
   text-shadow: 2px 2px 8px black;
 }
-.Hero{
-  border: 2px solid white;
-  border-radius: 1em;
-  color: white;
-  padding: 20px;
+.postPrevRow{
+  margin: 0 auto;
+}
+.postPrev{
+  height: 300px;
+  width: 100%;
+  border-radius: .5em;
   box-shadow: 2px 2px 8px black;
-  background-image: url('../images/man-2037255_1920.jpg')
+}
+.postPrev:hover{
+  box-shadow: 4px 4px 10px black;
+}
+hr{
+  background-color: white;
+  width: 50%;
+  box-shadow: 2px 2px 8px black;
+  border-bottom: 1px solid white;
+}
+.titlePrev{
+  height: 40%;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 1em;
+  bottom: 10;
+
+}
+.postPrevText{
+  margin-top: -5px;
+}
+.Footer{
+  background-color: #d1d0d0;
+  height: 50px;
 }
 
+.indexContent{
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 8px black;
+  margin-bottom: 20px;
+}
+.currentTraining{
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 2em;
+  padding: 15px 10px 10px 10px;
+}
+/*Blog Show Page */
+
+.blogPrevBox{
+  margin: 20px auto;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 1em;
+  padding: 10px;
+  min-height: 300px;
+  box-shadow: 2px 2px 8px black;
+  width: 70%;
+  animation-name: fadeInTop;
+  animation-duration:1.5s;
+}
+@media (max-width: 675px){
+  .blogPrevBox{
+    width:100%;
+    margin: none;
+  }
+}
+.blogPrevTitle{
+  text-align: center;
+}
+.blogPrevImg{
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  height: auto;
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid green;
+}
+.blogPrevHr{
+  background-color: black;
+  border-color: black;
+  box-shadow: none;
+}
+.myFace{
+  background-image: url('../images/jfitphoto.jpeg');
+  height: 50px;
+  width: 50px;
+  background-size: 65px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin:0 auto;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 20em;
+}
+.blogTime{
+  text-align: center;
+}
+
+/* About Page */
+.overallBox{
+  max-width: 75%;
+  margin: auto;
+  animation-name: fadeInTop;
+  animation-duration:1.5s;
+}
+.aboutBox{
+  margin: 15px auto 0 auto;
+  background-color: rgba(255,255,255,0.8);
+  text-align: center;
+  color: black;
+  box-shadow: 2px 2px 8px black;
+  padding: 15px 50px;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+.aboutBox li{
+  list-style: none;
+  margin-left: -20px;
+}
+.aboutBox  hr{
+  background-color: black;
+  border-color: black;
+  box-shadow: none;
+
+}
+.aboutImg{
+  background-image: url('../images/jfitphoto.jpeg');
+  height: 200px;
+  width: 200px;
+  background-size: 215px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin:auto;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 20em;
+}
+
+.followBox{
+  margin: 5px auto 50px auto;
+  background-color: rgba(255,255,255,0.8);
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 2px 2px 8px black;
+}
+.followBox i{
+  font-size: 25px;
+}
+
+/* Create Post */
+.createPost{
+  margin: 50px auto;
+  background-color: rgba(255,255,255,0.9);
+  text-align: center;
+  padding: 30px;
+  border-radius: 1em;
+  box-shadow: 2px 2px 8px black;
+  max-width: 600px;
+}
+
+/* Blog Post */
+.blogPostOverall{
+  text-align: center;
+  animation-name: fadeInTop;
+  animation-duration:1.5s;
+}
+.blogPostImg{
+  margin-left: -15px;
+  width: 100vw;
+}
+.foreGround{
+  background-color: rgba(255,255,255,0.5);
+  padding: 15px 15px 15px 15px;
+  border-radius: 1em;
+  margin: 0 10px 20px 10px;
+}
+.blogPostText{
+  background-color: rgba(255,255,255, 0.9);
+  padding: 15px;
+  box-shadow: 2px 2px 8px black;
+  
+}
+.blogPostText, p{
+  overflow-wrap: break-word;
+}
+.blogPostText hr{
+  background-color: black;
+  border-color: black;
+  box-shadow: none;
+}
