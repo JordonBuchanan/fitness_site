@@ -54,7 +54,7 @@ router.get("/blog/:id", function(req, res, next){
       if(err){
           console.log(err);
       } else{
-          res.render("blogpost", {Posts: foundPosts});
+          res.render("blogPost", {Posts: foundPosts});
       }
   })
 });
