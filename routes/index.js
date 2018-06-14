@@ -30,7 +30,7 @@ const cloudinary = require('cloudinary');
 cloudinary.config({ 
   cloud_name: 'dumxfw6s6', 
   api_key: 772524293964862, 
-  api_secret: 'Jg_RcHyalHfmPq1zFhH74UvNMSQ'
+  api_secret: 'secret' //not actual secret
 });
 
 /* GET home page. */
@@ -68,7 +68,7 @@ router.get('/login', function(req, res, next) {
 router.get('/login/facebook',
   passport.authenticate('facebook'));
 
-router.get('/login/facebook/callback',
+router.get('/`login/facebook/callback`',
   passport.authenticate('facebook', { failureRedirect: '/' }),
   function(req, res) {
     res.redirect('/');

@@ -8,8 +8,8 @@ const findOrCreate = require('mongoose-findorcreate')
 
 passport.use(new FacebookStrategy({
     clientID: 444425035971110,
-    clientSecret: 'fb4da3d584fe93dd4e3faf329454324c',
-    callbackURL: "https://frozen-ravine-13469.herokuapp.com/login/facebook/callback",
+    clientSecret: 'secret',
+    callbackURL: "http://localhost:3000",
     profileFields: ['id', 'displayName', 'name', 'gender', 'photos'],
   },
   function(accessToken, refreshToken, profile, cb) {
